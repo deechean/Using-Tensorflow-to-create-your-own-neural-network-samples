@@ -25,7 +25,7 @@ def get_batch_data(file_queue, batch_size):
    
 with tf.Graph().as_default() as g: 
     #生成训练数据文件队列,此处我们只有一个训练数据文件
-    train_file_queue = tf.train.string_input_producer(['iris_train.csv'], num_epochs=None) 
+    train_file_queue = tf.train.string_input_producer(['iris.csv'], num_epochs=None) 
   
     #从训练数据文件列表中获取数据和标签
     data,Y = get_batch_data(train_file_queue, TRAIN_BATCH_SIZE)
